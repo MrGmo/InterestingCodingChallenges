@@ -1,27 +1,89 @@
 
 
-// Diff Two Arrays (freeCodeCamp)
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Wherefore art thou
+// Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument). Each name and value pair of the source object has to be present in the object from the collection if it is to be included in the returned array.
+//
+// For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), because it contains the name and its value, that was passed on as the second argument.
+
+
+// Solution 1
+// function whatIsInAName(collection, source){
+//   let arr = collection.filter(item => {
+//     for(let x in source){
+//       if(source[x] !== item[x]){
+//         return false
+//       }
+//     }
+//       return true
+//   })
+//   return arr
+// }
+
+// Solution 2
+// function whatIsInAName(collection, source){
+//   let keys = Object.keys(source)
+//
+//   return collection.filter(obj => {
+//     for(let x of keys){
+//       if(!obj.hasOwnProperty(x) || obj[x] !== source[x]){
+//         return false;
+//         }
+//       }
+//       return true;
+//   });
+// }
+
+// console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet"}))
+
+
+// Seek and Destroy
+// You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+//
+// Note: You have to use the arguments object.
+
+
+// function destroyer(arr, ...rest){
+//   return arr.filter(x => !rest.includes(x))
+// }
+//
+// console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3))
+
+
+// Diff Two Arrays
 // Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
 //
 // Note: You can return the array with its elements in any order.
 
 
-function diffArray(arr1, arr2) {
-    let newArr = [];
-    if(arr1.length > arr2.length){
-      return arr1.filter(x => !arr2.includes(x)).concat(arr2.filter(x => !arr1.includes(x)))
-    }else if(arr1.length < arr2.length){
-      return arr2.filter(x => !arr1.includes(x)).concat(arr1.filter(x => !arr2.includes(x)))
-    }else{
-      return arr2.filter(x => !arr1.includes(x)).concat(arr1.filter(x => !arr2.includes(x)))
-    }
-    return newArr
-  }
+// function diffArray(arr1, arr2) {
+//     let newArr = [];
+//     if(arr1.length > arr2.length){
+//       return arr1.filter(x => !arr2.includes(x)).concat(arr2.filter(x => !arr1.includes(x)))
+//     }else if(arr1.length < arr2.length){
+//       return arr2.filter(x => !arr1.includes(x)).concat(arr1.filter(x => !arr2.includes(x)))
+//     }else{
+//       return arr2.filter(x => !arr1.includes(x)).concat(arr1.filter(x => !arr2.includes(x)))
+//     }
+//     return newArr
+//   }
+//
+// console.log(diffArray([1, "calf", 3, "piglet"], [7, "filly"]))
 
-console.log(diffArray([1, "calf", 3, "piglet"], [7, "filly"]))
 
-
-// Sum All Numbers in a Range (freeCodeCamp)
+// Sum All Numbers in a Range
 // We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. The lowest number will not always come first.
 //
 // For example, sumAll([4,1]) should return 10 because sum of all the numbers between 1 and 4 (both inclusive) is 10
