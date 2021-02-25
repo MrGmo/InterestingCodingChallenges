@@ -1,33 +1,40 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Example of a prototype
-// var s = [23, 65, 98, 5];
+// Diff Two Arrays (freeCodeCamp)
+// Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
 //
-// Array.prototype.myMap = function(callback) {
-//   var newArray = [];
-//
-//   this.forEach(a => newArray.push(callback(a)))
-//
-//   return newArray;
-// };
-//
-// var new_s = s.myMap(function(item) {
-//   return item * 2;
-// });
+// Note: You can return the array with its elements in any order.
 
+
+function diffArray(arr1, arr2) {
+    let newArr = [];
+    if(arr1.length > arr2.length){
+      return arr1.filter(x => !arr2.includes(x)).concat(arr2.filter(x => !arr1.includes(x)))
+    }else if(arr1.length < arr2.length){
+      return arr2.filter(x => !arr1.includes(x)).concat(arr1.filter(x => !arr2.includes(x)))
+    }else{
+      return arr2.filter(x => !arr1.includes(x)).concat(arr1.filter(x => !arr2.includes(x)))
+    }
+    return newArr
+  }
+
+console.log(diffArray([1, "calf", 3, "piglet"], [7, "filly"]))
+
+
+// Sum All Numbers in a Range (freeCodeCamp)
+// We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. The lowest number will not always come first.
+//
+// For example, sumAll([4,1]) should return 10 because sum of all the numbers between 1 and 4 (both inclusive) is 10
+
+// function sumAll(arr){
+//   let newArr = []
+//   for(let i = Math.min(...arr); i <= Math.max(...arr); i++){
+//     newArr.push(i)
+//   }
+//   return newArr.reduce((a, b) => a + b, 0)
+// }
+//
+// console.log(sumAll([4, 1]))
 
 
 
