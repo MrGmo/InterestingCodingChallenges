@@ -1,3 +1,16 @@
+// Missing letters
+// Find the missing letter in the passed letter range and return it.
+//
+// If all letters are present in the range, return undefined.
+
+
+function fearNotLetter(str){
+
+
+
+}
+
+console.log(fearNotLetter("abce"))
 
 
 
@@ -5,11 +18,60 @@
 
 
 
+// DNA Pairing
+// The DNA strand is missing the pairing element. Take each character, get its pair, and return the results as a 2d array.
+//
+// Base pairs are a pair of AT and CG. Match the missing element to the provided character.
+//
+// Return the provided character as the first element in each array.
+//
+// For example, for the input GCG, return [["G", "C"], ["C","G"],["G", "C"]]
+//
+// The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
+
+// Solution 1
+// function pairElement(str){
+//   let initialArr = str.split('')
+//   let newArr = []
+//   let arrArr = []
+//   initialArr.forEach(x => {
+//     if(x === 'A'){
+//       newArr.push('A')
+//       newArr.push('T')
+//     }else if(x === 'T'){
+//       newArr.push('T')
+//       newArr.push('A')
+//     }else if(x === 'C'){
+//       newArr.push('C')
+//       newArr.push('G')
+//     }else{
+//       newArr.push('G')
+//       newArr.push('C')
+//     }
+//   })
+//     while(newArr.length > 1){
+//       arrArr.push(newArr.splice(0,2))
+//     }
+//     return arrArr
+// }
+//
 
 
+// Solution 2
+// function pairElement(str){
+//   const pairs = {
+//     A: "T",
+//     T: "A",
+//     C: "G",
+//     G: "C"
+//   };
+//   const arr = str.split("");
+//   return arr.map(x => [x, pairs[x]]);
+// }
 
 
-
+// console.log(pairElement("ATCGA"))
+// should return [["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]]
 
 
 // Search and Replace
