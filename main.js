@@ -1,20 +1,120 @@
+
+
+
+
+
+
+
+
+
+// Sum All Odd Fibonacci Numbers
+// Given a positive integer num, return the sum of all odd Fibonacci numbers that are less than or equal to num.
+//
+// The first two numbers in the Fibonacci sequence are 1 and 1. Every additional number in the sequence is the sum of the two previous numbers. The first six numbers of the Fibonacci sequence are 1, 1, 2, 3, 5 and 8.
+//
+// For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less than or equal to 10 are 1, 1, 3, and 5.
+
+
+// function sumFibs(num){
+//   let sum = 1;
+//   let a = 1;
+//   let b = 1;
+//
+//   while (b <= num){
+//     if(b % 2 !== 0){
+//       sum+=b;
+//     }
+//     let temp = b
+//     b = a + b
+//     a = temp
+//   }
+//   return sum
+// }
+//
+// console.log(sumFibs(10))
+
+
+// Convert HTML Entities
+// Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.
+
+
+// function convertHTML(str){
+//   let arr = str.split("")
+//   for(let i = 0; i < arr.length; i++){
+//     switch(arr[i]){
+//       case '&':
+//       arr[i] = "&amp;";
+//       break;
+//       case '<':
+//       arr[i] = "&lt;";
+//       break;
+//       case '>':
+//       arr[i] = "&gt;";
+//       break;
+//       case '"':
+//       arr[i] = "&quot;";
+//       break;
+//       case "'":
+//       arr[i] = "&apos;";
+//     }
+//   }
+//   arr = arr.join("");
+//   return arr;
+// }
+
+// console.log(convertHTML('Stuff in "quotation marks"'))
+// should return "Stuff in &quot;quotation marks&quot;".
+
+
+
+// Sorted Union
+// Write a function that takes two or more arrays and returns a new array of unique values in the order of the original provided arrays.
+//
+// In other words, all values present from all arrays should be included in their original order, but with no duplicates in the final array.
+//
+// The unique numbers should be sorted by their original order, but the final array should not be sorted in numerical order.
+//
+// Check the assertion tests for examples.
+
+
+
+// const uniteUnique = (...arr) => [...new Set(arr.flat())]
+//
+// console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
+//
+// // should return [1, 3, 2, 5, 4]
+
+
+
 // Missing letters
 // Find the missing letter in the passed letter range and return it.
 //
 // If all letters are present in the range, return undefined.
 
-
-function fearNotLetter(str){
-
-
-
-}
-
-console.log(fearNotLetter("abce"))
-
-
-
-
+//
+// function fearNotLetter(str){
+//   const numArr = []
+//   const checkArr = []
+//   const min = str.charCodeAt(str[0])
+//   const max = str.charCodeAt(str.length-1)
+//
+//   for(let i = 0; i < str.length; i++){
+//     numArr.push(str.charCodeAt(i))
+//   }for(let j = min; j <= max; j++){
+//     checkArr.push(j)
+//   }
+//
+//   const diff = checkArr.reduce((a, b) => a+b, 0) - numArr.reduce((a, b) => a+b, 0)
+//
+//   if(diff === 0){
+//     return undefined
+//   }else{
+//     return String.fromCharCode(diff)
+//   }
+// }
+//
+// console.log(fearNotLetter("abce"))
+// // should return the letter d
 
 
 
