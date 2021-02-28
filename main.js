@@ -1,3 +1,49 @@
+
+
+
+
+// Steamroller
+// Flatten a nested array. You must account for varying levels of nesting.
+
+// function steamrollArray(arr){
+//   let flat = [].concat(...arr)
+//   return flat.some(Array.isArray) ? steamrollArray(flat) : flat;
+// }
+//
+// console.log(steamrollArray([1, [2], [3, [[4]]]]))
+
+
+// Drop it
+// Given the array arr, iterate through and remove each element starting from the first element (the 0 index) until the function func returns true when the iterated element is passed through it.
+//
+// Then return the rest of the array once the condition is satisfied, otherwise, arr should be returned as an empty array
+
+// Solution 1
+// function dropElements(arr, func){
+//   while(arr.length > 0 && !func(arr[0])){
+//       arr.shift()
+//     }
+//   return arr
+// }
+
+// Solution 2
+// function dropElements(arr, func){
+    // let length = arr.length
+//   for (let i = 0; i < length; i++) {
+//     if(func(arr[0])){
+//       break;
+//     } else {
+//       arr.shift();
+//     }
+//   }
+//   return arr;
+// }
+//
+// console.log(dropElements([1, 2, 3, 4], function(n) {return n >= 3; }))
+
+// should return [3, 4]
+
+
 // Smallest Common Multiple
 // Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters.
 //
@@ -6,42 +52,30 @@
 // For example, if given 1 and 3, find the smallest common multiple of both 1 and 3 that is also evenly divisible by all numbers between 1 and 3. The answer here would be 6.
 
 
-
-function smallestCommons(arr){
-  let newArr = []
-  if(arr[0] > arr[1]){
-    arr.sort((a, b) => a - b)
-  }
-
-  for(let i = arr[0]; i <= arr[1]; i++){
-    newArr.push(i)
-  }
-
-  let a = newArr[0]
-
-  for(let j = 1; j <= newArr.length ; j++){
-    let b = newArr[j]
-    let c = a
-
-    while(a&&b){
-      if(a > b){
-        a %= b
-      }else{
-        b %= a
-      }
-    }
-    a = (c * range[])
-  }
-
-}
-
-
-console.log(smallestCommons([1, 5]))
+// function smallestCommons(arr){
+//   if(arr[0] > arr[1]){
+//     arr.sort((a, b) => a - b)
+//   }
+//
+//   let lcm = arr[1]
+//
+// let calcSum = function(a, b){
+//   let mult = 1
+//   for(let i = 1; i <= a; i++){
+//     mult = b * i;
+//     if(mult % a === 0){
+//       return mult
+//     }
+//   }
+// }
+//   for(let j = arr[1]; j >= arr[0]; j--){
+//     lcm = calcSum(j, lcm)
+//   }
+//   return lcm;
+// }
+//
+// console.log(smallestCommons([1, 13]))
 // should return 60
-
-
-
-
 
 
 // Sum All Primes
