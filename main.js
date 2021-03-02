@@ -1,3 +1,61 @@
+
+
+// Arguments Optional
+// Create a function that sums two arguments together. If only one argument is provided, then return a function that expects one argument and returns the sum.
+//
+// For example, addTogether(2, 3) should return 5, and addTogether(2) should return a function.
+//
+// Calling this returned function with a single argument will then return the sum:
+//
+// var sumTwoAnd = addTogether(2);
+//
+// sumTwoAnd(3) returns 5.
+//
+// If either argument isn't a valid number, return undefined.
+
+
+// function addTogether(){
+//   const [first, second] = Object.values(arguments)
+//   if(typeof first !== 'number'){
+//     return undefined
+//   }
+//
+//   const addSecond = second => typeof second === 'number' ? first + second : undefined;
+//
+//   if(second !== undefined){
+//     return addSecond(second)
+//   }else{
+//     return addSecond
+//   }
+//
+// }
+//
+// console.log(addTogether(2, 3))
+// should return 5
+
+
+// // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+// //
+// // You may assume that each input would have exactly one solution, and you may not use the same element twice.
+// //
+// // You can return the answer in any order.
+//
+//
+//
+// function twoSums(nums, target){
+//   for(let i = 0; i < nums.length; i++){
+//     for(let j = i+1; j < nums.length; j++){
+//       if(nums[i] + nums[j] == target){
+//         return [i, j]
+//       }
+//     }
+//   }
+// }
+//
+// console.log(twoSums([2, 7, 11, 15], 9))
+// Output: Because nums[0] + nums[1] == 9, we return [0, 1].
+
+
 // Everything Be True
 // Check if the predicate (second argument) is truthy on all elements of a collection (first argument).
 //
