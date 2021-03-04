@@ -1,5 +1,64 @@
+// Caesars Cipher
+// One of the simplest and most widely known ciphers is a Caesar cipher, also known as a shift cipher. In a shift cipher the meanings of the letters are shifted by some set amount.
+//
+// A common modern use is the ROT13 cipher, where the values of the letters are shifted by 13 places. Thus A ↔ N, B ↔ O and so on.
+//
+// Write a function which takes a ROT13 encoded string as input and returns a decoded string.
+//
+// All letters will be uppercase. Do not transform any non-alphabetic character (i.e. spaces, punctuation), but do pass them on.
 
-// Palindrome Checker
+
+// function rot13(str){
+// str = str.split(' ').join('-')
+// let numArr = []
+// let wordsArr = []
+// let newWordsArr = []
+// for(let i = 0; i < str.length; i++){
+//   numArr.push(str.charCodeAt(i))
+// }
+// let shifted = numArr.map(x => x + 13)
+//
+//
+// for(let j = 0; j < shifted.length; j++){
+//   if(shifted[j] <= 90){
+//     wordsArr.push(shifted[j])
+//   }else{
+//     wordsArr.push(shifted[j] - 26)
+//   }
+// }
+// wordsArr.forEach(x => newWordsArr.push(String.fromCharCode(x)))
+//   return newWordsArr.join('').replace(/:/g,' ')
+//
+// return shifted
+// }
+//
+// console.log(rot13("SERR CVMMN!"))
+
+
+
+// Roman Numeral Converter
+// Convert the given number into a roman numeral.
+//
+// All roman numerals answers should be provided in upper-case.
+
+// function convertToRoman(num){
+//
+// let = romanMatrix = [[1000, 'M'],[900, 'CM'],[500, 'D'],[400, 'CD'],[100, 'C'],[90, 'XC'],[50, 'L'],[40, 'XL'],[10, 'X'],[9, 'IX'],[5, 'V'],[4, 'IV'],
+// [1, 'I']];
+//
+//     if (num === 0) {
+//       return '';
+//     }
+//     for (let i = 0; i < romanMatrix.length; i++) {
+//       if (num >= romanMatrix[i][0]) {
+//         return romanMatrix[i][1] + convertToRoman(num - romanMatrix[i][0]);
+//       }
+//     }
+//   }
+//
+// console.log(convertToRoman(36))
+
+
 // Return true if the given string is a palindrome. Otherwise, return false.
 //
 // A palindrome is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.
