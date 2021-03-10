@@ -371,6 +371,27 @@
 
 
 
+// Write a function that returns an array of fibonacci numbers. The function takes a number as an argument to decide how many no. of elements to produce. If the argument is less than or equal to 0 then return empty array.
+
+// function fibonacci(num){
+//   let a = 0
+//   let b = 1
+//   let sum = b
+//   let arr = [0,1]
+//   for(let i = 2; i < num; i++){
+//     sum = a + b
+//     a = b
+//     b = sum
+//     arr.push(sum)
+//   }
+//   return arr
+// }
+//
+// console.log(fibonacci(4))
+
+// should return [0,1,1,2]
+
+
 // Sum All Odd Fibonacci Numbers
 // Given a positive integer num, return the sum of all odd Fibonacci numbers that are less than or equal to num.
 //
