@@ -11,7 +11,6 @@
 //
 // Otherwise, return {status: "OPEN", change: [...]}, with the change due in coins and bills, sorted in highest to lowest order, as the value of the change key.
 
-
 // const checkCashRegister = (price, cash, cid) => {
 //   const UNIT_AMOUNT = {
 //     "PENNY": .01,
@@ -815,9 +814,9 @@
 // challenge1(100, 3)
 //
 //
-// // Example 2
+// Example 2
 // function tryTwo(num1, num2){
 //   let roundDown = Math.floor(num1 / num2)
 //   console.log(roundDown)
 // }
-// tryTwo(5, 4)
+// tryTwo(5, 2)
