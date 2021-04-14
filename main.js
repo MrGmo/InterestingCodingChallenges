@@ -1,8 +1,8 @@
 // Cash Register
 // Design a cash register drawer function checkCashRegister() that accepts purchase price as the first argument (price), payment as the second argument (cash), and cash-in-drawer (cid) as the third argument.
-//
+
 // cid is a 2D array listing available currency.
-//
+
 // The checkCashRegister() function should always return an object with a status key and a change key.
 //
 // Return {status: "INSUFFICIENT_FUNDS", change: []} if cash-in-drawer is less than the change due, or if you cannot return the exact change.
@@ -820,4 +820,4 @@
 //   let roundDown = Math.floor(num1 / num2)
 //   console.log(roundDown)
 // }
-// tryTwo (5, 4)
+// tryTwo(5, 4)
